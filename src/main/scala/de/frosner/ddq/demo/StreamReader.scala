@@ -9,7 +9,7 @@ import org.apache.spark.sql.types._
 
 object StreamReader extends App {
 
-  val conf = new SparkConf().setMaster("local").setAppName("DDQ Demo StreamReader")
+  val conf = new SparkConf().setMaster("local[2]").setAppName("DDQ Demo StreamReader")
   val sc = new SparkContext(conf)
   val sqlContext = new SQLContext(sc)
   import sqlContext.implicits._
